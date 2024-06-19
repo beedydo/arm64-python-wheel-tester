@@ -1,0 +1,353 @@
+{
+ "Resources": {
+  "GithubSelfhostvpc08294D7A": {
+   "Type": "AWS::EC2::VPC",
+   "Properties": {
+    "CidrBlock": "10.0.0.0/16",
+    "EnableDnsHostnames": true,
+    "EnableDnsSupport": true,
+    "InstanceTenancy": "default",
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "arm64-github-testers/Github-Selfhost-vpc"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "arm64-github-testers/Github-Selfhost-vpc/Resource"
+   }
+  },
+  "GithubSelfhostvpcselfhostpublicSubnet1Subnet9B644FC2": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "VpcId": {
+     "Ref": "GithubSelfhostvpc08294D7A"
+    },
+    "AvailabilityZone": {
+     "Fn::Select": [
+      0,
+      {
+       "Fn::GetAZs": ""
+      }
+     ]
+    },
+    "CidrBlock": "10.0.0.0/17",
+    "MapPublicIpOnLaunch": true,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "selfhost_public"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Public"
+     },
+     {
+      "Key": "Name",
+      "Value": "arm64-github-testers/Github-Selfhost-vpc/selfhost_publicSubnet1"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "arm64-github-testers/Github-Selfhost-vpc/selfhost_publicSubnet1/Subnet"
+   }
+  },
+  "GithubSelfhostvpcselfhostpublicSubnet1RouteTable2A09F876": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "VpcId": {
+     "Ref": "GithubSelfhostvpc08294D7A"
+    },
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "arm64-github-testers/Github-Selfhost-vpc/selfhost_publicSubnet1"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "arm64-github-testers/Github-Selfhost-vpc/selfhost_publicSubnet1/RouteTable"
+   }
+  },
+  "GithubSelfhostvpcselfhostpublicSubnet1RouteTableAssociation37E155C7": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "GithubSelfhostvpcselfhostpublicSubnet1RouteTable2A09F876"
+    },
+    "SubnetId": {
+     "Ref": "GithubSelfhostvpcselfhostpublicSubnet1Subnet9B644FC2"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "arm64-github-testers/Github-Selfhost-vpc/selfhost_publicSubnet1/RouteTableAssociation"
+   }
+  },
+  "GithubSelfhostvpcselfhostpublicSubnet1DefaultRouteC2B0FE55": {
+   "Type": "AWS::EC2::Route",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "GithubSelfhostvpcselfhostpublicSubnet1RouteTable2A09F876"
+    },
+    "DestinationCidrBlock": "0.0.0.0/0",
+    "GatewayId": {
+     "Ref": "GithubSelfhostvpcIGW7B35D912"
+    }
+   },
+   "DependsOn": [
+    "GithubSelfhostvpcVPCGW7351BA8A"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "arm64-github-testers/Github-Selfhost-vpc/selfhost_publicSubnet1/DefaultRoute"
+   }
+  },
+  "GithubSelfhostvpcselfhostpublicSubnet2Subnet576F7619": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "VpcId": {
+     "Ref": "GithubSelfhostvpc08294D7A"
+    },
+    "AvailabilityZone": {
+     "Fn::Select": [
+      1,
+      {
+       "Fn::GetAZs": ""
+      }
+     ]
+    },
+    "CidrBlock": "10.0.128.0/17",
+    "MapPublicIpOnLaunch": true,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "selfhost_public"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Public"
+     },
+     {
+      "Key": "Name",
+      "Value": "arm64-github-testers/Github-Selfhost-vpc/selfhost_publicSubnet2"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "arm64-github-testers/Github-Selfhost-vpc/selfhost_publicSubnet2/Subnet"
+   }
+  },
+  "GithubSelfhostvpcselfhostpublicSubnet2RouteTable17871E08": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "VpcId": {
+     "Ref": "GithubSelfhostvpc08294D7A"
+    },
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "arm64-github-testers/Github-Selfhost-vpc/selfhost_publicSubnet2"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "arm64-github-testers/Github-Selfhost-vpc/selfhost_publicSubnet2/RouteTable"
+   }
+  },
+  "GithubSelfhostvpcselfhostpublicSubnet2RouteTableAssociation3E7E112C": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "GithubSelfhostvpcselfhostpublicSubnet2RouteTable17871E08"
+    },
+    "SubnetId": {
+     "Ref": "GithubSelfhostvpcselfhostpublicSubnet2Subnet576F7619"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "arm64-github-testers/Github-Selfhost-vpc/selfhost_publicSubnet2/RouteTableAssociation"
+   }
+  },
+  "GithubSelfhostvpcselfhostpublicSubnet2DefaultRoute74633E43": {
+   "Type": "AWS::EC2::Route",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "GithubSelfhostvpcselfhostpublicSubnet2RouteTable17871E08"
+    },
+    "DestinationCidrBlock": "0.0.0.0/0",
+    "GatewayId": {
+     "Ref": "GithubSelfhostvpcIGW7B35D912"
+    }
+   },
+   "DependsOn": [
+    "GithubSelfhostvpcVPCGW7351BA8A"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "arm64-github-testers/Github-Selfhost-vpc/selfhost_publicSubnet2/DefaultRoute"
+   }
+  },
+  "GithubSelfhostvpcIGW7B35D912": {
+   "Type": "AWS::EC2::InternetGateway",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "arm64-github-testers/Github-Selfhost-vpc"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "arm64-github-testers/Github-Selfhost-vpc/IGW"
+   }
+  },
+  "GithubSelfhostvpcVPCGW7351BA8A": {
+   "Type": "AWS::EC2::VPCGatewayAttachment",
+   "Properties": {
+    "VpcId": {
+     "Ref": "GithubSelfhostvpc08294D7A"
+    },
+    "InternetGatewayId": {
+     "Ref": "GithubSelfhostvpcIGW7B35D912"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "arm64-github-testers/Github-Selfhost-vpc/VPCGW"
+   }
+  },
+  "focal1testerInstanceSecurityGroup0DF9A21E": {
+   "Type": "AWS::EC2::SecurityGroup",
+   "Properties": {
+    "GroupDescription": "arm64-github-testers/focal1-tester/InstanceSecurityGroup",
+    "SecurityGroupEgress": [
+     {
+      "CidrIp": "0.0.0.0/0",
+      "Description": "Allow all outbound traffic by default",
+      "IpProtocol": "-1"
+     }
+    ],
+    "SecurityGroupIngress": [
+     {
+      "CidrIp": "0.0.0.0/0",
+      "Description": "Allow inbound HTTPS connections",
+      "FromPort": 443,
+      "IpProtocol": "tcp",
+      "ToPort": 443
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "arm64-github-testers/focal1-tester"
+     }
+    ],
+    "VpcId": {
+     "Ref": "GithubSelfhostvpc08294D7A"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "arm64-github-testers/focal1-tester/InstanceSecurityGroup/Resource"
+   }
+  },
+  "focal1testerInstanceRole09C2E0E8": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "ec2.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "arm64-github-testers/focal1-tester"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "arm64-github-testers/focal1-tester/InstanceRole/Resource"
+   }
+  },
+  "focal1testerInstanceProfile92CF471D": {
+   "Type": "AWS::IAM::InstanceProfile",
+   "Properties": {
+    "Roles": [
+     {
+      "Ref": "focal1testerInstanceRole09C2E0E8"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "arm64-github-testers/focal1-tester/InstanceProfile"
+   }
+  },
+  "focal1testerDC9D858C": {
+   "Type": "AWS::EC2::Instance",
+   "Properties": {
+    "AvailabilityZone": {
+     "Fn::Select": [
+      0,
+      {
+       "Fn::GetAZs": ""
+      }
+     ]
+    },
+    "BlockDeviceMappings": [
+     {
+      "DeviceName": "/dev/sda1",
+      "Ebs": {
+       "VolumeSize": 128
+      }
+     }
+    ],
+    "IamInstanceProfile": {
+     "Ref": "focal1testerInstanceProfile92CF471D"
+    },
+    "ImageId": "ami-0c66b288fa1d4e793",
+    "InstanceType": "m6g.large",
+    "KeyName": "wendy_key",
+    "SecurityGroupIds": [
+     {
+      "Fn::GetAtt": [
+       "focal1testerInstanceSecurityGroup0DF9A21E",
+       "GroupId"
+      ]
+     }
+    ],
+    "SubnetId": {
+     "Ref": "GithubSelfhostvpcselfhostpublicSubnet1Subnet9B644FC2"
+    },
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "arm64-github-testers/focal1-tester"
+     }
+    ],
+    "UserData": {
+     "Fn::Base64": "#!/bin/bash\napt-get update -y\napt-get upgrade -y\napt-get install -y curl software-properties-common\ncurl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -\nadd-apt-repository 'deb [arch=arm64] https://download.docker.com/linux/ubuntu focal stable'\napt-get update -y\napt-get install -y docker-ce docker-ce-cli containerd.io\nsystemctl start docker"
+    }
+   },
+   "DependsOn": [
+    "focal1testerInstanceRole09C2E0E8"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "arm64-github-testers/focal1-tester/Resource"
+   }
+  },
+  "CDKMetadata": {
+   "Type": "AWS::CDK::Metadata",
+   "Properties": {
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/12OwY7CMAxEv4V7CFD4gEU9IG5Vi7inXiMMrY0SR6iK8u+rAt1KnGb8Zix7Y4v1zq4XP+4ZlvB7XyUQjzY16uBuagwSPaAphYP6CGrKC080m3EpIRQ2nR8wRueqNFVsO4Imtoyv+uxqiYon13Y485ntQxAgpyT8Xx7NkRU9ox6c4tMNnzOfaa/q4NojqzlyUMeApkGInnQ4eImP16VvMFWzIdfbVMv7o0mnuPJyoQ5zzqYa9Cq82tpNYbeLWyBa+shKPdr6rX9ljaKGSgEAAA=="
+   },
+   "Metadata": {
+    "aws:cdk:path": "arm64-github-testers/CDKMetadata/Default"
+   }
+  }
+ }
+}

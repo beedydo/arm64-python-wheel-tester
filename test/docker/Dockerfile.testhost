@@ -1,0 +1,14 @@
+FROM amazonlinux:2023
+
+RUN dnf install -y \
+    docker \
+    git \
+    python3-pip
+RUN pip3 install pyyaml requests
+ARG USER_GID=100
+ARG USER_UID=1000
+ARG USER_NAME=ec2-user
+ARG DOCKER_GID=1001
+RUN grep $USER_GID /etc/group || groupadd -g $USER_GID $USER_NAME
+RUN grep $DOCKER_GID /etc/group || groupadd -g $DOCKER_GID docker_group
+RUN useradd -m --no-log-init -g $USER_GID -u $USER_UID $USER_NAME && usermod -aG $DOCKER_GID $USER_NAME

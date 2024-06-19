@@ -1,0 +1,313 @@
+{
+  "version": "21.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "arm64-github-testers": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/ap-southeast-1",
+      "properties": {
+        "templateFile": "arm64-github-testers.template.json",
+        "validateOnSynth": false
+      },
+      "metadata": {
+        "/arm64-github-testers/Github-Selfhost-vpc/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GithubSelfhostvpc08294D7A",
+            "trace": [
+              "new Vpc (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:405:25)",
+              "Kernel._Kernel_create (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:10119:25)",
+              "Kernel.create (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:9790:93)",
+              "KernelHost.processRequest (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11707:36)",
+              "KernelHost.run (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11667:22)",
+              "Immediate._onImmediate (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11668:46)",
+              "process.processImmediate (node:internal/timers:478:21)"
+            ]
+          }
+        ],
+        "/arm64-github-testers/Github-Selfhost-vpc/selfhost_publicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GithubSelfhostvpcselfhostpublicSubnet1Subnet9B644FC2",
+            "trace": [
+              "new Subnet (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:783:24)",
+              "new PublicSubnet (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:987:9)",
+              "/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:679:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:653:32)",
+              "Vpc.createSubnets (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:649:18)",
+              "new Vpc (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:431:14)",
+              "Kernel._Kernel_create (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:10119:25)",
+              "Kernel.create (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:9790:93)",
+              "KernelHost.processRequest (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11707:36)",
+              "KernelHost.run (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11667:22)",
+              "Immediate._onImmediate (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11668:46)",
+              "process.processImmediate (node:internal/timers:478:21)"
+            ]
+          }
+        ],
+        "/arm64-github-testers/Github-Selfhost-vpc/selfhost_publicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GithubSelfhostvpcselfhostpublicSubnet1RouteTable2A09F876",
+            "trace": [
+              "new Subnet (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:799:23)",
+              "new PublicSubnet (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:987:9)",
+              "/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:679:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:653:32)",
+              "Vpc.createSubnets (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:649:18)",
+              "new Vpc (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:431:14)",
+              "Kernel._Kernel_create (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:10119:25)",
+              "Kernel.create (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:9790:93)",
+              "KernelHost.processRequest (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11707:36)",
+              "KernelHost.run (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11667:22)",
+              "Immediate._onImmediate (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11668:46)",
+              "process.processImmediate (node:internal/timers:478:21)"
+            ]
+          }
+        ],
+        "/arm64-github-testers/Github-Selfhost-vpc/selfhost_publicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GithubSelfhostvpcselfhostpublicSubnet1RouteTableAssociation37E155C7",
+            "trace": [
+              "new Subnet (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:804:9)",
+              "new PublicSubnet (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:987:9)",
+              "/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:679:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:653:32)",
+              "Vpc.createSubnets (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:649:18)",
+              "new Vpc (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:431:14)",
+              "Kernel._Kernel_create (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:10119:25)",
+              "Kernel.create (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:9790:93)",
+              "KernelHost.processRequest (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11707:36)",
+              "KernelHost.run (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11667:22)",
+              "Immediate._onImmediate (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11668:46)",
+              "process.processImmediate (node:internal/timers:478:21)"
+            ]
+          }
+        ],
+        "/arm64-github-testers/Github-Selfhost-vpc/selfhost_publicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GithubSelfhostvpcselfhostpublicSubnet1DefaultRouteC2B0FE55",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:840:23)",
+              "/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:443:30",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:442:32)",
+              "Kernel._Kernel_create (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:10119:25)",
+              "Kernel.create (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:9790:93)",
+              "KernelHost.processRequest (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11707:36)",
+              "KernelHost.run (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11667:22)",
+              "Immediate._onImmediate (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11668:46)",
+              "process.processImmediate (node:internal/timers:478:21)"
+            ]
+          }
+        ],
+        "/arm64-github-testers/Github-Selfhost-vpc/selfhost_publicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GithubSelfhostvpcselfhostpublicSubnet2Subnet576F7619",
+            "trace": [
+              "new Subnet (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:783:24)",
+              "new PublicSubnet (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:987:9)",
+              "/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:679:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:653:32)",
+              "Vpc.createSubnets (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:649:18)",
+              "new Vpc (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:431:14)",
+              "Kernel._Kernel_create (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:10119:25)",
+              "Kernel.create (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:9790:93)",
+              "KernelHost.processRequest (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11707:36)",
+              "KernelHost.run (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11667:22)",
+              "Immediate._onImmediate (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11668:46)",
+              "process.processImmediate (node:internal/timers:478:21)"
+            ]
+          }
+        ],
+        "/arm64-github-testers/Github-Selfhost-vpc/selfhost_publicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GithubSelfhostvpcselfhostpublicSubnet2RouteTable17871E08",
+            "trace": [
+              "new Subnet (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:799:23)",
+              "new PublicSubnet (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:987:9)",
+              "/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:679:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:653:32)",
+              "Vpc.createSubnets (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:649:18)",
+              "new Vpc (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:431:14)",
+              "Kernel._Kernel_create (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:10119:25)",
+              "Kernel.create (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:9790:93)",
+              "KernelHost.processRequest (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11707:36)",
+              "KernelHost.run (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11667:22)",
+              "Immediate._onImmediate (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11668:46)",
+              "process.processImmediate (node:internal/timers:478:21)"
+            ]
+          }
+        ],
+        "/arm64-github-testers/Github-Selfhost-vpc/selfhost_publicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GithubSelfhostvpcselfhostpublicSubnet2RouteTableAssociation3E7E112C",
+            "trace": [
+              "new Subnet (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:804:9)",
+              "new PublicSubnet (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:987:9)",
+              "/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:679:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:653:32)",
+              "Vpc.createSubnets (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:649:18)",
+              "new Vpc (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:431:14)",
+              "Kernel._Kernel_create (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:10119:25)",
+              "Kernel.create (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:9790:93)",
+              "KernelHost.processRequest (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11707:36)",
+              "KernelHost.run (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11667:22)",
+              "Immediate._onImmediate (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11668:46)",
+              "process.processImmediate (node:internal/timers:478:21)"
+            ]
+          }
+        ],
+        "/arm64-github-testers/Github-Selfhost-vpc/selfhost_publicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GithubSelfhostvpcselfhostpublicSubnet2DefaultRoute74633E43",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:840:23)",
+              "/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:443:30",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:442:32)",
+              "Kernel._Kernel_create (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:10119:25)",
+              "Kernel.create (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:9790:93)",
+              "KernelHost.processRequest (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11707:36)",
+              "KernelHost.run (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11667:22)",
+              "Immediate._onImmediate (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11668:46)",
+              "process.processImmediate (node:internal/timers:478:21)"
+            ]
+          }
+        ],
+        "/arm64-github-testers/Github-Selfhost-vpc/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GithubSelfhostvpcIGW7B35D912",
+            "trace": [
+              "new Vpc (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:435:25)",
+              "Kernel._Kernel_create (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:10119:25)",
+              "Kernel.create (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:9790:93)",
+              "KernelHost.processRequest (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11707:36)",
+              "KernelHost.run (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11667:22)",
+              "Immediate._onImmediate (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11668:46)",
+              "process.processImmediate (node:internal/timers:478:21)"
+            ]
+          }
+        ],
+        "/arm64-github-testers/Github-Selfhost-vpc/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GithubSelfhostvpcVPCGW7351BA8A",
+            "trace": [
+              "new Vpc (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:438:25)",
+              "Kernel._Kernel_create (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:10119:25)",
+              "Kernel.create (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:9790:93)",
+              "KernelHost.processRequest (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11707:36)",
+              "KernelHost.run (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11667:22)",
+              "Immediate._onImmediate (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11668:46)",
+              "process.processImmediate (node:internal/timers:478:21)"
+            ]
+          }
+        ],
+        "/arm64-github-testers/focal1-tester/InstanceSecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "focal1testerInstanceSecurityGroup0DF9A21E",
+            "trace": [
+              "new SecurityGroup (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:202:30)",
+              "new Instance (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/instance.js:43:34)",
+              "Kernel._Kernel_create (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:10119:25)",
+              "Kernel.create (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:9790:93)",
+              "KernelHost.processRequest (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11707:36)",
+              "KernelHost.run (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11667:22)",
+              "Immediate._onImmediate (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11668:46)",
+              "process.processImmediate (node:internal/timers:478:21)"
+            ]
+          }
+        ],
+        "/arm64-github-testers/focal1-tester/InstanceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "focal1testerInstanceRole09C2E0E8",
+            "trace": [
+              "new Role (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-iam/lib/role.js:63:22)",
+              "new Instance (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/instance.js:51:35)",
+              "Kernel._Kernel_create (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:10119:25)",
+              "Kernel.create (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:9790:93)",
+              "KernelHost.processRequest (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11707:36)",
+              "KernelHost.run (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11667:22)",
+              "Immediate._onImmediate (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11668:46)",
+              "process.processImmediate (node:internal/timers:478:21)"
+            ]
+          }
+        ],
+        "/arm64-github-testers/focal1-tester/InstanceProfile": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "focal1testerInstanceProfile92CF471D",
+            "trace": [
+              "new Instance (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/instance.js:55:28)",
+              "Kernel._Kernel_create (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:10119:25)",
+              "Kernel.create (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:9790:93)",
+              "KernelHost.processRequest (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11707:36)",
+              "KernelHost.run (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11667:22)",
+              "Immediate._onImmediate (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11668:46)",
+              "process.processImmediate (node:internal/timers:478:21)"
+            ]
+          }
+        ],
+        "/arm64-github-testers/focal1-tester/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "focal1testerDC9D858C",
+            "trace": [
+              "new Instance (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/aws-ec2/lib/instance.js:90:25)",
+              "Kernel._Kernel_create (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:10119:25)",
+              "Kernel.create (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:9790:93)",
+              "KernelHost.processRequest (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11707:36)",
+              "KernelHost.run (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11667:22)",
+              "Immediate._onImmediate (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11668:46)",
+              "process.processImmediate (node:internal/timers:478:21)"
+            ]
+          }
+        ],
+        "/arm64-github-testers/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:22:30)",
+              "/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/core/lib/private/synthesis.js:139:9",
+              "visit (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/core/lib/private/synthesis.js:200:9)",
+              "visit (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/core/lib/private/synthesis.js:197:9)",
+              "injectMetadataResources (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/core/lib/private/synthesis.js:128:5)",
+              "Object.synthesize (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
+              "App.synth (/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/jsii-kernel-lMSEUv/node_modules/@aws-cdk/core/lib/stage.js:104:41)",
+              "/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:9866:172",
+              "Kernel._Kernel_ensureSync (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:10491:24)",
+              "Kernel.invoke (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:9866:102)",
+              "KernelHost.processRequest (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11707:36)",
+              "KernelHost.run (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11667:22)",
+              "Immediate._onImmediate (/private/var/folders/s6/kqrgghts0rx2540z0b0q_sf80000gr/T/tmpuxu4a5z0/lib/program.js:11668:46)",
+              "process.processImmediate (node:internal/timers:478:21)"
+            ]
+          }
+        ]
+      },
+      "displayName": "arm64-github-testers"
+    }
+  }
+}
